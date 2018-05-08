@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Kotlin TV Maze</string>
+    <string name="loading">Loading...</string>
+    <string name="cant_get_data_please_try_again">Can\'t get data. Please try again!</string>
+    <string name="retry">Retry</string>
+    <string name="you_are_offline_check_settings">You are offline. Please check your connectivity settings!</string>
+    <string name="page_loaded">Page %1$d has been loaded 😎</string>
+</resources>

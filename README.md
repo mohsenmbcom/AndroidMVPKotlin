@@ -12,6 +12,9 @@ Also used these libraries/frameworks/tools:
 - **RxKotlin**, **RxAndroid**
 - **Picasso**
 - **Constraint layout**, **RecyclerView**
+- **DataBinding Library**
+
+> * Note that the tests are comming 😇
 
 ## Meta
 

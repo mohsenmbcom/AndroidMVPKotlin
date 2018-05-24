@@ -3,8 +3,8 @@ package com.mohsenmb.kotlintvmaze.presenter
 import com.mohsenmb.kotlintvmaze.model.ShowsListInteractor
 import com.mohsenmb.kotlintvmaze.view.ShowsListView
 import io.reactivex.android.schedulers.AndroidSchedulers
-import javax.inject.Inject
 import io.reactivex.disposables.Disposable
+import javax.inject.Inject
 
 
 class ShowsListPresenterImpl @Inject constructor(private val showsListInteractor: ShowsListInteractor) : ShowsListPresenter {

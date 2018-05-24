@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentTransaction
 import com.mohsenmb.kotlintvmaze.R
 import com.mohsenmb.kotlintvmaze.fragments.ShowsListFragment
 
-class MainActivity : BaseActivity(){
+class MainActivity : BaseActivity() {
 
     private val showsListFragment: ShowsListFragment = ShowsListFragment()
 

@@ -1,36 +1,31 @@
 package com.mohsenmb.kotlintvmaze.component
 
+import android.databinding.DataBindingUtil
+import android.databinding.ViewDataBinding
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
+import com.mohsenmb.kotlintvmaze.BR
 import com.mohsenmb.kotlintvmaze.R
 import com.mohsenmb.kotlintvmaze.model.Show
-import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.row_show.view.*
 
-class ShowsListAdapter(private val showsList: List<Show>) : RecyclerView.Adapter<ShowsListViewHolder>() {
+class ShowsListAdapter(private val showsList: List<Show>) : RecyclerView.Adapter<DataBindingViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShowsListViewHolder {
-        val layoutInflater : LayoutInflater = LayoutInflater.from(parent.context)
-        return ShowsListViewHolder(layoutInflater.inflate(R.layout.row_show, parent, false))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DataBindingViewHolder {
+        val layoutInflater = LayoutInflater.from(parent.context)
+        val binding: ViewDataBinding =
+                DataBindingUtil.inflate(layoutInflater, R.layout.row_show, parent, false)
+
+        return DataBindingViewHolder(binding)
     }
 
     override fun getItemCount(): Int {
         return showsList.size
     }
 
-    override fun onBindViewHolder(holder: ShowsListViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: DataBindingViewHolder, position: Int) {
         val show: Show = showsList[position]
-        holder.tvShowTitle.text = show.name
-        Picasso.get().load(show.image.medium).into(holder.imgShowCover)
+        holder.bindVariable(BR.show, show)
     }
 
-}
-
-class ShowsListViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
-    val tvShowTitle: TextView = itemView!!.tvShowTitle
-    val imgShowCover: ImageView = itemView!!.imgShowCover
 }

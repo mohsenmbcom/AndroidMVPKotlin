@@ -14,7 +14,7 @@ import com.mohsenmb.kotlintvmaze.model.Show
 import com.mohsenmb.kotlintvmaze.presenter.ShowsListPresenter
 import com.mohsenmb.kotlintvmaze.view.ShowsListView
 import kotlinx.android.synthetic.main.fragment_shows_list.*
-import java.util.ArrayList
+import java.util.*
 import javax.inject.Inject
 
 class ShowsListFragment : BaseFragment(), ShowsListView {
